@@ -1,0 +1,87 @@
+@import "./partials/_reset";
+@import "./partials/_commons";
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: $main-sans-serif;
+    background-color: $bg-color;
+}
+
+[class*="__container"] {
+    max-width: calc(1170 / 1366 * 100%);
+    margin: 0px auto;
+}
+
+@media (min-width: 1601px) {
+    [class*="__container"] {
+        max-width: 1370px;
+        margin: 0px auto;
+    }
+}
+
+.wrapper {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.main {
+    flex: 1 1 auto;
+}
+
+.section-title {
+    font-family: $main-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+}
+
+.section-text {
+    font-family: $main-sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+}
+.catalog-button {
+    width: 205px;
+    height: 64px;
+    color: $bg-color;
+    background-color: $button-and-footer;
+    transition: background-color 100ms ease 0s;
+}
+
+.catalog-button:hover {
+    background-color: $button-active;
+}
+
+.catalog-button:active {
+    box-shadow: inset 0px 0px 4px 2px $dash;
+}
+
+.dash {
+    display: inline-block;
+    border-bottom: 1px solid $dash;
+    width: 30px;
+    height: 0px;
+}
+
+.dash_long {
+    width: 50px;
+}
+
+.footer {
+    z-index: 49;
+    background-color: $button-and-footer;
+}
+
+@import "./partials/_header";
+@import "./partials/_collection";
+@import "./partials/_pop-models";
+@import "./partials/_pagination";
+@import "./partials/_socials";
+@import "./partials/_footer";

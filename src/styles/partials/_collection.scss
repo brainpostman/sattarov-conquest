@@ -1,0 +1,239 @@
+.landing {
+    padding: 85px 0 0 0;
+    background-color: $section-color;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 10px;
+    }
+}
+
+.text-block {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    color: $text-dark;
+    gap: 30px;
+    padding: 0 0 0 80px;
+    &__title {
+        font-family: $main-serif;
+        font-style: normal;
+        line-height: 60px;
+        font-weight: 400;
+        font-size: 4.5em;
+    }
+    &__title > .dash {
+        position: relative;
+        margin-right: 8px;
+        margin-bottom: 16px;
+        margin-left: -58px;
+    }
+
+    &__description {
+        font-family: $main-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 3em;
+        line-height: 40px;
+        margin-top: -25px;
+    }
+
+    &__text {
+        z-index: 50;
+        font-family: $main-sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 1.4em;
+        line-height: 21px;
+        width: 258px;
+    }
+}
+
+.watch {
+    z-index: 1;
+    display: flex;
+    font-family: $serif;
+    font-style: normal;
+    font-weight: 400;
+    margin-right: 18px;
+
+    &__price {
+        font-size: 1.6em;
+        z-index: 2;
+        flex: 1 1 0;
+        align-self: flex-start;
+        margin-top: 138px;
+        margin-right: -6px;
+    }
+
+    .ruble {
+        height: 0.8em;
+    }
+
+    &__price > .dash {
+        position: relative;
+        margin-left: 15px;
+        margin-bottom: 5px;
+    }
+
+    &__image {
+        padding-top: 9px;
+        background: url("../../resources/landing/Ellipse-cut.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        padding-left: 36.5%;
+        margin-left: -36.5%;
+        max-width: 100%;
+    }
+
+    &__info {
+        font-size: 1.6em;
+        z-index: 2;
+        align-self: flex-end;
+        margin-bottom: 116px;
+        margin-left: -47px;
+    }
+
+    &__info > .dash {
+        position: relative;
+        margin-right: 15px;
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 1294px) {
+    .text-block {
+        padding: 0 0 0 30px;
+        &__title > .dash {
+            width: 20px;
+            margin-left: -28px;
+        }
+    }
+
+    .watch {
+        &__info > .dash,
+        &__price > .dash {
+            width: 20px;
+        }
+        &__price > .dash {
+            margin-left: 8px;
+        }
+        &__info > .dash {
+            margin-right: 8px;
+        }
+    }
+}
+
+@media (max-width: 1140px) {
+    .landing__container {
+        font-size: 7px;
+    }
+
+    .text-block {
+        &__title > .dash {
+            margin-bottom: 12px;
+        }
+        &__text {
+            font-size: 1.6em;
+        }
+    }
+
+    .watch {
+        &__price {
+            margin-top: 80px;
+            margin-right: -40px;
+            font-size: 1.8em;
+        }
+        &__info {
+            margin-bottom: 80px;
+            font-size: 1.8em;
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .watch {
+        justify-content: flex-end;
+        &__info,
+        &__price {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 649px) {
+    .landing {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .landing__container {
+        font-size: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .text-block {
+        margin-left: 16px;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        &__title > .dash {
+            width: 50px;
+        }
+        &__text {
+            font-size: 1.8em;
+            text-align: center;
+        }
+    }
+
+    .watch {
+        position: relative;
+        filter: opacity(0.1);
+        height: 100vh;
+        right: -60%;
+        &__image {
+            position: absolute;
+            max-width: none;
+        }
+    }
+}
+
+@media (max-width: 520px) {
+    .landing__container {
+        font-size: 8px;
+    }
+
+    .text-block {
+        &__title > .dash {
+            margin-bottom: 12px;
+            width: 20px;
+        }
+        &__text {
+            font-size: 2em;
+            max-width: 100%;
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 374.98px) {
+    .landing__container {
+        font-size: 6px;
+    }
+
+    .text-block {
+        &__title > .dash {
+            display: none;
+        }
+        &__text {
+            font-size: 2.2em;
+            max-width: 80%;
+            text-align: center;
+        }
+    }
+}

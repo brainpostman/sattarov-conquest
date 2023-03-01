@@ -1,0 +1,146 @@
+.pop-models {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: $text-dark;
+        padding: 86px 0 86px 0;
+        height: 100%;
+    }
+
+    &__see-more {
+        align-self: flex-end;
+        font-family: $main-sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        padding: 2px 2px 7px 2px;
+        border-bottom: 1px solid #c4c0b6;
+        clip-path: inset(2px 2px 0 2px);
+    }
+
+    &__see-more:hover {
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+        clip-path: inset(2px 2px -3px 2px);
+    }
+
+    &__merch {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 25px;
+        gap: 34px;
+    }
+
+    &__title {
+        text-align: center;
+        vertical-align: middle;
+    }
+}
+
+.merch {
+    &__display {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        background-color: $section-color;
+        padding: 0 28px 0 28px;
+        font-size: 10px;
+        max-height: 467px;
+    }
+
+    &__model {
+        font-family: $main-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1.4em;
+        letter-spacing: 0.03em;
+        margin-left: 13px;
+        margin-top: 9.64%;
+        margin-bottom: 12px;
+    }
+
+    &__price {
+        font-family: $serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.2em;
+        margin-left: 13px;
+    }
+
+    .ruble_small {
+        height: 0.8em;
+        margin-left: 2px;
+    }
+
+    &__image {
+        background: linear-gradient(270.37deg, #e2d0c4 0.3%, rgba(226, 208, 196, 0) 99.67%);
+        padding: 1px;
+        border-radius: 50%;
+    }
+
+    &__body {
+        border-radius: 50%;
+        background-color: $section-color;
+        object-fit: cover;
+        max-width: 100%;
+    }
+
+    &__info {
+        font-family: $main-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.6em;
+        margin-left: 13px;
+        margin-top: 24px;
+        margin-bottom: 7.71%;
+        cursor: pointer;
+    }
+
+    &__info:hover {
+        text-decoration: underline;
+    }
+
+    &__info > .dash {
+        position: relative;
+        margin-bottom: 4px;
+        margin-right: 19px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .pop-models {
+        &__container {
+            padding: 43px 0 43px 0;
+        }
+
+        &__title {
+            order: 1;
+        }
+        &__merch {
+            order: 2;
+            flex-direction: column;
+            gap: 34px;
+        }
+        &__see-more {
+            margin-top: 34px;
+            order: 3;
+            align-self: center;
+        }
+    }
+
+    .merch {
+        &__info > .dash {
+            width: 15px;
+            margin-bottom: 4px;
+            margin-right: 8px;
+        }
+
+        &__price {
+            margin-bottom: 10px;
+        }
+    }
+}
